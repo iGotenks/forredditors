@@ -18,37 +18,22 @@ user_input = driver.find_element_by_id('id_email')
 user_input.send_keys(TARGET)
 gh = driver.find_element_by_xpath('/html/body/div[4]/div/div/div[2]/form/div[3]/fieldset/div/div[1]/h2')
 gh.click()
+
 close = driver.find_element_by_xpath('/html/body/div[6]/div/div[2]')
 close.click()
-import time 
+
+import time
 time.sleep(1)
 news = driver.find_element_by_xpath('/html/body/div[4]/div/div/div[2]/form/div[3]/fieldset/div/div[2]/div/div[1]/input')
 news.click()
-import time 
-time.sleep(1)
-news2 = driver.find_element_by_xpath('/html/body/div[4]/div/div/div[2]/form/div[3]/fieldset/div/div[2]/div/div[2]')
-news2.click()
-import time 
-time.sleep(1)
-news3 = driver.find_element_by_xpath('/html/body/div[4]/div/div/div[2]/form/div[3]/fieldset/div/div[2]/div/div[3]')
-news3.click()
-import time 
-time.sleep(1)
-news4 = driver.find_element_by_xpath('/html/body/div[4]/div/div/div[2]/form/div[3]/fieldset/div/div[2]/div/div[4]')
-news4.click()
-import time 
-time.sleep(1)
-news5 = driver.find_element_by_xpath('/html/body/div[4]/div/div/div[2]/form/div[3]/fieldset/div/div[2]/div/div[5]')
-news5.click()
-import time 
-time.sleep(1)
-news6 = driver.find_element_by_xpath('/html/body/div[4]/div/div/div[2]/form/div[3]/fieldset/div/div[2]/div/div[6]')
-news6.click()
+
+for i in range(2,6):
+    time.sleep(1)
+    news_i = driver.find_element_by_xpath(f'/html/body/div[4]/div/div/div[2]/form/div[3]/fieldset/div/div[2]/div/div[{i}]')
+    news_i.click()
 
 
-import time 
 time.sleep(2)
 
 login_button = driver.find_element_by_xpath('/html/body/div[4]/div/div/div[2]/form/div[3]/div/input')
 login_button.click()
-
