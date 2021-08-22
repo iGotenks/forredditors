@@ -16,23 +16,22 @@ username = 'bhjbdh555f' #replace the text 'replace me i am useless" with the use
 TARGET = 'jxxibraxx7@baitify.com' #replace the text 'replace me i am useless" with the target email
 driver.get('https://www.adam4adam.com/')
 password = 'azerhd5#'
+
 user_input = driver.find_element_by_xpath('/html/body/main/section[1]/div/div/div/form/div/div[1]/input')
 user_input.send_keys(username)
-
 user_input = driver.find_element_by_xpath('/html/body/main/section[1]/div/div/div/form/div/div[2]/input')
 user_input.send_keys(TARGET)
 import time
 time.sleep(2)
-
 user_input = driver.find_element_by_xpath('/html/body/main/section[1]/div/div/div/form/div/div[3]/input')
 user_input.send_keys(password)
-import time
 time.sleep(2)
 user_input = driver.find_element_by_xpath('/html/body/main/section[1]/div/div/div/form/div/div[4]/input')
 user_input.send_keys(password)
 
 sign = driver.find_element_by_xpath('/html/body/main/section[1]/div/div/div/form/button')
 sign.click()
-import time
+
 time.sleep(3.5)
+
 driver.quit()
